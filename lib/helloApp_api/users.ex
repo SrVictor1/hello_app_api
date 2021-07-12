@@ -22,5 +22,8 @@ defmodule HelloAppApi.Users do
     |> cast(params, @field)
     |> validate_required(@field_require)
     |> validate_format(:email, ~r/@/)
+    |> validate_length(:password, min: 6)
+    |> validate_length(:name, min: 2)
+    |> validate_length(:status_text, max: 150)
   end
 end

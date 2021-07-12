@@ -1,11 +1,9 @@
 # Script for populating the database. You can run it as:
-#
-#     mix run priv/repo/seeds.exs
-#
-# Inside the script, you can read and write to any of your
-# repositories directly:
-#
-#     HelloAppApi.Repo.insert!(%HelloAppApi.SomeSchema{})
-#
-# We recommend using the bang functions (`insert!`, `update!`
-# and so on) as they will fail if something goes wrong.
+
+HelloAppApi.Users.User.create_user(%{
+  name: "Victor",
+  status: true,
+  status_text: "'-''",
+  password: "12121212",
+  email: "victorlol.vh12@gmail.com"
+})
